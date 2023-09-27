@@ -26,9 +26,9 @@ public class MemberService {
     public Long join(Member member){
         // 조건. 같은 이름의 회원은 등록 불가
 
-        validateDuplicateMember(member); // 중복회원 검증
-        memberRepository.save(member);
-        return member.getId();
+            validateDuplicateMember(member); // 중복회원 검증
+            memberRepository.save(member);
+            return member.getId();
     }
 
     private void validateDuplicateMember(Member member) {
@@ -42,7 +42,8 @@ public class MemberService {
      * 전체 회원 조회
      */
     public List<Member> findMembers(){
-        return memberRepository.findAll();
+
+            return memberRepository.findAll();
     }
 
     public Optional<Member> findOne(Long memberId){
